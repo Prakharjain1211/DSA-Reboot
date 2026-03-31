@@ -10,10 +10,10 @@ class MyQueue:
     def pop(self) -> int:
         while(len(self.stack1)!=0):
             self.stack2.append(self.stack1.pop())
-        node = self.stack2.pop()
+        top = self.stack2.pop()
         while(len(self.stack2)!=0):
             self.stack1.append(self.stack2.pop()) 
-        return node
+        return top
     def peek(self) -> int:
         while(len(self.stack1)!=0):
             self.stack2.append(self.stack1.pop())
